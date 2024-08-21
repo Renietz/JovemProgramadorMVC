@@ -13,7 +13,7 @@ namespace JovemProgramadorMVC.data.Mapeamento.Repositorio
             _bancoContexto = bancoContexto;
         }
 
-        public List<Aluno> BuscarAluno()
+        public List<Aluno> BuscarAlunos()
         {
             return _bancoContexto.Aluno.ToList();
         }

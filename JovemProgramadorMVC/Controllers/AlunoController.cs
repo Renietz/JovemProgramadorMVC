@@ -12,7 +12,7 @@ namespace JovemProgramadorMVC.Controllers
         }
         public IActionResult Index()
         {
-            var aluno = _alunoRepositorio.BuscarAluno();
+            var aluno = _alunoRepositorio.BuscarAlunos();
             return View(aluno);
         }
     }
