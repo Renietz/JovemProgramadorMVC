@@ -3,7 +3,7 @@ using JovemProgramadorMVC.Models;
 
 namespace JovemProgramadorMVC.data.Mapeamento.Repositorio
 {
-    public class AlunoRepositorio : IAlunoRepositorio
+    public class AlunoRepositorio : IAlunoRepositorio 
     {
 
         private readonly BancoContexto _bancoContexto;
@@ -13,7 +13,7 @@ namespace JovemProgramadorMVC.data.Mapeamento.Repositorio
             _bancoContexto = bancoContexto;
         }
 
-        public List<Aluno> BuscarAlunos()
+        public List<Aluno> BuscarAluno()
         {
             return _bancoContexto.Aluno.ToList();
         }

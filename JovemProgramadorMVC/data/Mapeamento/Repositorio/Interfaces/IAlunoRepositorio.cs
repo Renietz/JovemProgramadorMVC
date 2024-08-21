@@ -4,7 +4,7 @@ namespace JovemProgramadorMVC.data.Mapeamento.Repositorio.Interfaces
 {
     public interface IAlunoRepositorio
     {
-        List<Aluno> BuscarAlunos();
+        List<Aluno> BuscarAluno();
     }
 
 }
