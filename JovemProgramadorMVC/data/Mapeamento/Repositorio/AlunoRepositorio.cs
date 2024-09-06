@@ -1,9 +1,10 @@
 ﻿using JovemProgramadorMVC.data.Mapeamento.Repositorio.Interfaces;
 using JovemProgramadorMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace JovemProgramadorMVC.data.Mapeamento.Repositorio
 {
-    public class AlunoRepositorio : IAlunoRepositorio 
+    public class AlunoRepositorio : IAlunoRepositorio
     {
 
         private readonly BancoContexto _bancoContexto;
@@ -23,6 +24,24 @@ namespace JovemProgramadorMVC.data.Mapeamento.Repositorio
             _bancoContexto.Aluno.Add(aluno);
             _bancoContexto.SaveChanges();
         }
-    }
+        public Aluno BuscarId(int id)
+        {
+            return _bancoContexto.Aluno.FirstOrDefault(x => x.Id == id);
+        }
 
+        public void EditarAluno(Aluno aluno)
+        {
+            _bancoContexto.Aluno.Update(aluno);
+            _bancoContexto.SaveChanges();
+
+        }
+
+        public void Excluir(Aluno aluno)
+        {
+            _bancoContexto.Aluno.Remove(aluno);
+            _bancoContexto.SaveChanges();
+
+        }
+
+    }
 }
