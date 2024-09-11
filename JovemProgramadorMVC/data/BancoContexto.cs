@@ -14,8 +14,17 @@ namespace JovemProgramadorMVC.data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AlunoMapeamento());
+            modelBuilder.ApplyConfiguration(new ProfessorMapeamento());
         }
 
         public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Professor> Professor { get; set; }
+
+        
+        
+            
+        
+
+       
     }
 }
