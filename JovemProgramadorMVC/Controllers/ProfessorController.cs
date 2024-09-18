@@ -49,7 +49,7 @@ namespace JovemProgramadorMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult ExcluirP(Professor professor)
+        public IActionResult Excluir(Professor professor)
         {
             _professorRepositorio.Excluir(professor);
             return RedirectToAction("Index");
